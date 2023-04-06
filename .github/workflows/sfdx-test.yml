@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Setup Salesforce CLI
-      uses: salesforcecli/setup-sfdx@v2
+      uses: salesforcecli/sfdx-cli@v2
       with:
         version: 'latest'
     - name: Authenticate with Salesforce
