@@ -9,9 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Setup Salesforce CLI
-      uses: salesforcecli/sfdx-cli@v2
+      uses: sfdx-actions/setup-sfdx@v1
       with:
-        version: 'latest'
+        sfdx-version:: 'latest'
     - name: Authenticate with Salesforce
       run: |
           sfdx force:auth:username:password -u rishabh.zutshi-yuny@force.com -p Zutshicot@23 -r https://login.salesforce.com -a scratchorg
