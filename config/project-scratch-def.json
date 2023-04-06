@@ -1,12 +1,13 @@
 {
-  "country": "US",
+  "orgName": "Demo company",
   "edition": "Developer",
-  "orgPreferences": {
-    "enabled": [
-      "S1DesktopEnabled"
-    ],
-    "disabled": []
-  },
-  "orgName": "Your Company",
-  "adminEmail": "yourname@example.com"
+  "features": ["EnableSetPasswordInApi"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
 }
