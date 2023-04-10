@@ -11,9 +11,10 @@ jobs:
     - name: Setup Salesforce CLI
       uses: sfdx-actions/setup-sfdx@v1
       with:
-        sfdx-version: 'latest'
+        sfdx-version: 'latest'  
     - name: Authenticate with Salesforce
       run: |
+        sfdx --version 
         sfdx force:auth:username -u rishabh.zutshi-yuny@force.com -p Zutshicot@23 -r https://login.salesforce.com -a scratchorg
         sfdx force:org:create -s -f config/project-scratch-def.json -a scratchorg
     - name: Push metadata to scratch org
