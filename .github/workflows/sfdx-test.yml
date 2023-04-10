@@ -8,10 +8,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup Salesforce CLI
-      uses: sfdx-actions/setup-sfdx@v1
-      with:
-        sfdx-version: 'latest'  
+    - name: Install Salesforce CLI
+      run: |
+        curl https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz | tar xJf -
+        ./sfdx/install
+  
     - name: Authenticate with Salesforce
       run: |
         sfdx --version 
