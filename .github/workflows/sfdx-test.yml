@@ -14,7 +14,7 @@ jobs:
         version: 'latest'
     - name: Authenticate with Salesforce
       run: |
-        sfdx force:org:login:web -a scratchorg -r https://login.salesforce.com
+        sfdx org:login:web -a scratchorg -r https://login.salesforce.com
         sfdx force:org:create -s -f config/project-scratch-def.json -a scratchorg
         
     - name: Push metadata to scratch org
